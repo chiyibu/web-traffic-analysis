@@ -26,6 +26,7 @@ object PreParseETL {
       .partitionBy("year", "month", "day") // todo 这个地方的partitionBy是不是就是hive里的partitionBy
       .saveAsTable("rawdata.web")
 
+    // 关闭会话
     spark.stop()
   }
 
